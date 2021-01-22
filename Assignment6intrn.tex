@@ -1,0 +1,209 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{tkz-euclide}
+
+\begin{document}
+\title{Assignment 6}
+\author{Junaid Ahmad Bhat}
+\date{January 22, 2021}
+\maketitle
+\section*{{\small Question}}
+Draw GOLD such that OL = 7.5,GL =6,GD = 6, LD = 5, OD = 10.
+
+
+\section*{{\small Solution}}
+\begin{center}
+\begin{tikzpicture}[scale=1]
+    
+    \coordinate[label=left:$L$] (L) at (0,0);
+    \coordinate[label=right:$D$] (D) at (5,0);
+    \coordinate[label=above:$G$] (G) at (2.5,5.45);
+    \coordinate[label=above:$O$] (O) at (-1.87,7.26);
+  
+    
+    \draw (L)--node[below] {5}
+    (D)--node[right] {$\textrm{6}$}
+    (G)--node[above] {$\textrm{}$}
+    (O)--node[left] {$\textrm{7.5}$}    
+    (L)--node[below] {$\textrm{6}$}
+    (G)--node[right] {$\textrm{}$}
+    (D)--node[above] {$\textrm{10}$}(O);
+\end{tikzpicture}
+
+\end{center}
+\hspace*{6cm} Rough Sketch\\
+
+\textbf{TO draw the figure we need to find coordinates of all vertices}\\
+
+Assuming L as origin i,e L(0,0)\\
+
+Therefore coordinates of D are (5,0) \hspace*{2cm}(as LD = 5)\\
+
+Now,let's find coordinates of vertices G and O.\\
+
+\textbf{Coordinates of G}\\
+
+G is the intersection point of line LG and DG.\\
+
+Line LG:y = mx + c\\
+
+\hspace*{0.5cm}y=tan($\angle$GLD)x+c\hspace*{2cm}(1) \\
+
+$\angle$GLD = cos$^-$$^1$((6$^2$+5$^2$-6$^2$)/(2*6*5))\hspace*{2cm}(cosine rule)\\
+
+Therefore,$\angle$GLD=65.37$^{\circ}$\hspace*{2cm}(2)\\
+
+Putting eqn(2) in eqn(1),we get\\
+
+y = 2.18x + c\\
+
+Also c=0       \hspace{3cm} (as it passes through (0,0))\\
+
+Therefore LG:y=2.18x  \hspace*{2cm}(A)\\
+
+Similarly\\
+
+
+Line DG:y = mx + c\\
+
+\hspace*{0.5cm}y=tan((180$^{\circ}$-$\angle$GDL)x+c\hspace*{2cm}(3)(angles measured anti-clockwise)\\
+
+$\angle$GLD = cos$^-$$^1$((6$^2$+5$^2$-6$^2$)/(2*6*5))\hspace*{2cm}(cosine rule)\\
+
+Therefore,$\angle$GDL=65.37$^{\circ}$\hspace*{2cm}(4)\\
+
+Putting eqn(4) in eqn(3),we get\\
+
+y = -2.18x + c\\
+
+Also c=10.9       \hspace{3cm} (as it passes through (5,0))\\
+
+Line DG:y = -2.18x + 10.9 \hspace*{2cm}(B)\\
+
+solving  eqn(A) and eqn(B),we get\\
+
+\hspace*{1cm}   x = 2.5;  y = 5.45\\
+
+Therefore coordinates of G are (2.5,5.45)\\
+
+\textbf{Coordinates of O}\\
+
+G is the intersection point of line LO and DO.\\
+
+Line LO:y = mx + c\\
+
+\hspace*{0.5cm}y=tan($\angle$OLD)x+c\hspace*{2cm}(5) \\
+
+$\angle$OLD = cos$^-$$^1$((7.5$^2$+5$^2$-10$^2$)/(2*7.5*5))\hspace*{2cm}(cosine rule)\\
+
+Therefore,$\angle$OLD=104.47$^{\circ}$\hspace*{2cm}(6)\\
+
+Putting eqn(6) in eqn(5),we get\\
+
+y = -3.87x + c\\
+
+Also c=0       \hspace{3cm} (as it passes through (0,0))\\
+
+Therefore LO:y= -3.87x  \hspace*{2cm}(C)\\
+
+Similarly\\
+
+
+Line DO:y = mx + c\\
+
+\hspace*{0.5cm}y=tan((180$^{\circ}$-$\angle$ODL)x+c\hspace*{2cm}(7)(angles measured anti-clockwise) \\
+
+$\angle$OLD = cos$^-$$^1$((10$^2$+5$^2$-7.5$^2$)/(2*10*5))\hspace*{2cm}(cosine rule)\\
+
+Therefore,$\angle$ODL=46.56$^{\circ}$\hspace*{2cm}(8)\\
+
+Putting eqn(8) in eqn(7),we get\\
+
+y = -1.056x + c\\
+
+Also c=5.28       \hspace{3cm} (as it passes through (5,0))\\
+
+Line DO:y = -2.18x + 5.28 \hspace*{2cm}(D)\\
+
+solving  eqn(C) and eqn(D),we get\\
+
+\hspace*{1cm}   x = -1.87;  y = 7.26\\
+
+Therefore coordinates of O are (-1.87,7.26)\\
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth]{Assignment6intrn_2,34}
+\caption{Figure using python}
+\end{figure} 
+
+\pagebreak
+
+
+\section*{{\small Question}}
+Draw rectangle OKAY with OK = 7 and KA =5.
+
+
+\section*{{\small Solution}}
+
+As given figure is rectangle,therefore\\
+
+YO=5 ; AY=7       (opposite sides are equal)
+
+\begin{center}
+\begin{tikzpicture}[scale=1]
+    
+    \coordinate[label=left:$O$] (O) at (0,0);
+    \coordinate[label=right:$K$] (K) at (7,0);
+    \coordinate[label=above:$A$] (A) at (7,5);
+    \coordinate[label=above:$Y$] (Y) at (0,5);
+  
+    
+    \draw (O)--node[below] {7}
+    (K)--node[right] {$\textrm{5}$}
+    (A)--node[above] {$\textrm{7}$}
+    (Y)--node[left] {$\textrm{5}$}    
+    (O)
+   ;
+\end{tikzpicture}
+
+\end{center}
+\hspace*{6cm} Rough Sketch\\
+
+\textbf{To draw triangle, we need coordinates of all vertices}
+
+Assuming O as origin i,e O(0,0)\\
+
+Therefore K has coordinates as (7,0)   \hspace*{2cm}(as OK=7)\\
+
+Also it is clear;y mentioned that given figure rectangle\\
+
+Therefore A has coordinates as (7,5)   \hspace*{1cm} (as KA=5)\\
+
+also Y has coordinates as (0,5)  \hspace*{1cm} (Figure is rectangle)\\
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth]{Assignment6intrn_2,41}
+\caption{Figure using python}
+\end{figure}
+
+\end{document}
